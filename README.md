@@ -1,8 +1,3 @@
----
-layout: default
-title: "League of Legends Role Impact Statistical Analysis"
----
-
 # League of Legends Role Impact Statistical Analysis
 
 League of Legends Role Impact Analysis is a data science project conducted at UCSD. The project includes exploratory data analysis, data cleaning, an analysis of missingness on the dataset, hypothesis testing, a baseline model, final model, and a fairness analysis.
