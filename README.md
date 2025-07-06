@@ -65,7 +65,7 @@ This horizontal shows the total damage dealt to champions at the 15-minute mark,
 
 
 <iframe
-  src="assets/goldat15_per_role_histogram.html"
+  src="assets/total_damage_per_role_histogram.html"
   width="800"
   height="600"
   frameborder="0"
