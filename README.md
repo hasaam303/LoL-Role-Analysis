@@ -1,10 +1,9 @@
-# League of Legends Role Impact Statistical Analysis
 
 League of Legends Role Impact Analysis is a data science project conducted at UCSD. The project includes exploratory data analysis, data cleaning, an analysis of missingness on the dataset, hypothesis testing, a baseline model, final model, and a fairness analysis.
 
 ---
 
-## Introduction
+# Introduction
 
 ### General Introduction and Purpose
 
@@ -49,17 +48,29 @@ While the dataset included columns such as goldat10, xpat10 for each feature all
 
 Below is the head of the dataframe df_cleaned.
 
-![Raw Dataset Sample](screenshot-2025-03-14-233605.png)
+
 
 ## Univariate and Bivariate Analysis
 
 This horizontal histogram shows the sum of gold at 15 minutes per role. We can see that bot has the most by just a little bit while support has much less than the rest. This makes sense and introduces bias against the support role because strategies, especially by professional players, do not funnel gold into support players.
 
-![Gold at 15 Minutes by Role](assets/screenshot-2025-03-14-222802.png)
+<h3>Gold at 15 Min per Role</h3>
+<iframe
+  src="assets/goldat15_per_role_histogram.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 This bivariate analysis on gold difference at 15 minutes and results visualizes the difference between how much gold the winning team has vs how much gold the losing team has. From this, we can see that winning teams do have more gold and the gold difference between bot is the most significant.
 
-![Gold Difference at 15 Minutes by Role (Winners vs Losers)](assets/screenshot-2025-03-14-222749.png)
+<h3>Gold Difference at 15 Minutes by Role</h3>
+<iframe
+  src="assets/gold_diff_outcome_boxplot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Interesting Aggregates
 
