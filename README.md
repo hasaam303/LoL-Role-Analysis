@@ -46,15 +46,24 @@ For simplicity let's only keep the relevant columns introduced in the introducti
 
 While the dataset included columns such as goldat10, xpat10 for each feature all the way until 25 minutes into the game, I chose to analyze the data at the 15-minute mark because the average game length was approximately 19 minutes and 39 seconds (19:39). Using multiple timestamps would introduce redundancy, and analyzing metrics at later points, such as 20 or 25 minutes, would not be meaningful, given that many matches end before reaching those times.
 
-Below is the head of the dataframe df_cleaned.
+Below is the head of the dataframe df_cleaned
+
+<h3>Sample Match Data (First 5 Rows)</h3>
+<iframe
+  src="assets/df_head.html"
+  width="1000"
+  height="400"
+  frameborder="0"
+></iframe>
 
 
 
-## Univariate and Bivariate Analysis
+## Univariate Analysis
 
-This horizontal histogram shows the sum of gold at 15 minutes per role. We can see that bot has the most by just a little bit while support has much less than the rest. This makes sense and introduces bias against the support role because strategies, especially by professional players, do not funnel gold into support players.
+This horizontal shows the total damage dealt to champions at the 15-minute mark, grouped by role. Using damage instead of gold offers a more direct measure of in-game impact rather than looking at resources gained (like gold), we observe how those resources are used. It is clear that the bot role stands out as the top contributor to early-game damage.This makes sense and introduces bias against the support role because strategies, especially by professional players, do not funnel resources such as gold and protection into support players.
 
-<h3>Gold at 15 Min per Role</h3>
+
+
 <iframe
   src="assets/goldat15_per_role_histogram.html"
   width="800"
@@ -62,9 +71,11 @@ This horizontal histogram shows the sum of gold at 15 minutes per role. We can s
   frameborder="0"
 ></iframe>
 
+## Bivariate Analysis
+
 This bivariate analysis on gold difference at 15 minutes and results visualizes the difference between how much gold the winning team has vs how much gold the losing team has. From this, we can see that winning teams do have more gold and the gold difference between bot is the most significant.
 
-<h3>Gold Difference at 15 Minutes by Role</h3>
+
 <iframe
   src="assets/gold_diff_outcome_boxplot.html"
   width="800"
