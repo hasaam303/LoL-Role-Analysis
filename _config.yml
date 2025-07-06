@@ -1,1 +1,5 @@
 theme: minima
+title: LoL Role Impact Analysis
+description: Data science analysis of role influence in League of Legends.
+url: "https://hasaam303.github.io/LoL-Role-Analysis"
+github_repo: "https://github.com/hasaam303/LoL-Role-Analysis"
