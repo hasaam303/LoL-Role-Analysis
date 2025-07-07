@@ -53,7 +53,7 @@ While the dataset included columns such as goldat10, xpat10 for each feature all
 Below is the head of the dataframe df_cleaned
 <iframe
   src="assets/df_cleaned_head_table.html"
-  width="500"
+  width="900"
   height="300"
   frameborder="0"
 ></iframe>
