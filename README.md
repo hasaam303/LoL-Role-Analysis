@@ -3,6 +3,7 @@ League of Legends Role Impact Analysis is a data science project conducted at UC
 
 ---
 
+
 # Introduction
 
 ### General Introduction and Purpose
@@ -18,6 +19,7 @@ The question I'm aiming to explore is: **Which role in League of Legends has the
 By analyzing these factors, we seek to determine whether there is a singular role that has a greater impact on match results than other positions. Additionally, we aim to explore the extent to which early-game advantages translate into victories and whether certain statistical patterns about each role can be leveraged to predict game outcomes. This analysis allows for the ability to further understand the impact of roles and their contribution to the final result.
 
 ---
+
 
 ## Introduction of Columns
 
@@ -38,7 +40,9 @@ The dataset contains 19,068 rows and 161 columns featuring various statistical o
 
 ---
 
+
 # Data Cleaning and Exploratory Data Analysis
+
 
 ## Data Cleaning
 
@@ -48,14 +52,12 @@ While the dataset included columns such as goldat10, xpat10 for each feature all
 
 Below is the head of the dataframe df_cleaned
 
-<h3>Sample Match Data (First 5 Rows)</h3>
 <iframe
-  src="assets/df_head.html"
+  src="assets/df_cleaned_head_table.html"
   width="1000"
-  height="400"
+  height="500"
   frameborder="0"
 ></iframe>
-
 
 
 ## Univariate Analysis
@@ -85,12 +87,12 @@ This bivariate analysis on gold difference at 15 minutes and results visualizes 
 
 ## Interesting Aggregates
 
-These aggregates summarize gameplay metrics for each role, highlighting differences in gold, experience, kills, assists, and damage dealt. Bot lane has the highest damage output and assists, reinforcing its role in team fights. Jungle shows high variance in kills, reflecting its impact variability. Support leads in assists but deals the least damage, aligning with its playstyle. Despite these differences, win rates remain balanced, suggesting fair matchmaking.
+Through DataFrame manipulation, we can find aggregates that summarize gameplay metrics for each role, highlighting differences in gold, experience, kills, assists, and damage dealt. Bot lane has the highest damage output and assists, reinforcing its role in team fights. Jungle shows high variance in kills, reflecting its impact variability. Support leads in assists but deals the least damage, aligning with its playstyle. Despite these differences, win rates remain balanced, suggesting fair matchmaking.
 
 
-![Aggregated Role Statistics](assets/screenshot-2025-03-14-233556.png)
 
 ---
+
 
 # Assessment of Missingness
 
@@ -127,6 +129,7 @@ The results of the experiment concluded in extremely low p-values, close to 0, f
 
 ---
 
+
 # Framing a Prediction Problem
 
 Our hypothesis testing concluded that gold difference plays a significant difference across all roles in the outcome of winning or losing a game. Our exploratory data analysis showed us that the statistics differ for each role. Since we saw that the bot role had the greatest amount of both gold at 10 minutes and damage dealt to enemy champions at 10 minutes, we can frame our prediction problem around the bot role.
@@ -134,6 +137,7 @@ Our hypothesis testing concluded that gold difference plays a significant differ
 Our prediction problem will be to try to predict the outcome of a game based on the stats of the bot player. In order to do this, we need to construct a model that takes in early-game statistics such as gold difference at 15 minutes (golddiffat15) and XP difference at 15 minutes (xpdiffat15) as input features and outputs whether the bot player’s team will win or lose the game.
 
 ---
+
 
 # Baseline Model
 
@@ -150,6 +154,7 @@ The logistic regression model achieved an accuracy of 67.8%, indicating moderate
 While the model provides a reasonable baseline, its accuracy and F1-scores indicate that it is not highly reliable. The results suggest that gold and XP differences at 15 minutes are useful indicators of match outcomes, but they are likely not the only determining factors.
 
 ---
+
 
 # Final Model
 
