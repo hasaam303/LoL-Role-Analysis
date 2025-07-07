@@ -54,7 +54,7 @@ Below is the head of the dataframe df_cleaned
 <iframe
   src="assets/df_cleaned_head_table.html"
   width="1000"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
