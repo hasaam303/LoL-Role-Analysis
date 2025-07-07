@@ -51,14 +51,12 @@ For simplicity let's only keep the relevant columns introduced in the introducti
 While the dataset included columns such as goldat10, xpat10 for each feature all the way until 25 minutes into the game, I chose to analyze the data at the 15-minute mark because the average game length was approximately 19 minutes and 39 seconds (19:39). Using multiple timestamps would introduce redundancy, and analyzing metrics at later points, such as 20 or 25 minutes, would not be meaningful, given that many matches end before reaching those times.
 
 Below is the head of the dataframe df_cleaned
-
 <iframe
   src="assets/df_cleaned_head_table.html"
   width="1000"
   height="600"
   frameborder="0"
 ></iframe>
-
 
 ## Univariate Analysis
 
